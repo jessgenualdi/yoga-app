@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  anatomy_id: MyString
+  integer: MyString
+  user_is: MyString
+  integer: MyString
+
+two:
+  anatomy_id: MyString
+  integer: MyString
+  user_is: MyString
+  integer: MyString

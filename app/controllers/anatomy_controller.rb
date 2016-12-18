@@ -1,0 +1,2 @@
+class AnatomyController < ApplicationController
+end
