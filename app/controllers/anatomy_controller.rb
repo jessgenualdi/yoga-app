@@ -1,2 +1,0 @@
-class AnatomyController < ApplicationController
-end
