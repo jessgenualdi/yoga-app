@@ -1,0 +1,24 @@
+<h1>Login</h1>
+<%= form_tag '/login', method: :post do %>
+  <div>
+    <%= label_tag :phone_number %>
+    <%= text_field_tag :phone_number %>
+  </div>
+  <div>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+
+
+<div class="container">
+  <% @anatomies.each do |anatomy| %>
+  <p><%= anatomy.anatomy_name %></p>
+  <% end %>
+  <% @poses.each do |pose| %>
+  <p><%= pose.sanskrit_name %></p>
+  <% end %>
+ 
+</div>
