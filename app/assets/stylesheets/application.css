@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+ .main {
+  padding: 100px 0;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  overflow-y: hidden;
+  background: url("../img/bg-pattern.png"), #A8DFC8;
+  /* fallback for old browsers */
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #A8DFC8, #B1DFA8);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #A8DFC8, #B1DFA8);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+ }
+
+.center {
+  margin: auto;
+}
+ a:hover {
+   border: 1px solid green;
+ }
+
+
+ .md-button {
+  color : currentColor;
+}
+
+.md-button:not([disabled]):hover {
+  background-color: rgba(158, 158, 158, 0.2);
+  cursor: pointer;
+}
+
+.md-button[disabled] {
+  color : rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+
+.red{
+  color:red;
+}
+
+.blue{
+  color:blue;
+}

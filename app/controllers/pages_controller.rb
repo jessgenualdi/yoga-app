@@ -5,4 +5,10 @@ class PagesController < ApplicationController
 
     render 'index.html.erb'
   end
+
+  def show
+    anatomy_id = params[:id]
+    @anatomy = anatomy.find_by(id: anatomy_id)
+    render 'show.html.erb'
+  end
 end

@@ -1,11 +1,20 @@
-<div class="container">
-
-  <div ng-app="app">
-    <div ng-app="anatomiesCtrl">
-      <div ng-repeat="anatomy in anatomies">
-       <h2>{{ anatomies.anatomyName }}</h2>
-     </div>
+<div class="container main">
+  <div class="col-md-3"></div>
+    <div class="col-md-3" ng-app="app">
+      <div ng-controller="anatomiesCtrl" ng-init="setup()">
+        <div ng-repeat="anatomy in anatomies">
+         <!-- <div ng-controller="anatomyUsersCtrl" ng-click="addAnatomyUsers(anatomy.id)"> -->
+          <!-- <md-button ng-class="class" ng-click="changeClass()">{{ anatomy.anatomy_name }}</md-button> -->
+          <input type="checkbox" ng-model="anatomy.selected">
+          {{ anatomy.anatomy_name }}
+          <!-- </div> -->
+       </div>
+       <button ng-click="addAnatomyUsers()">Submit</button>
+      </div>
     </div>
-  </div>
+    <div class="col-md-3">
+     <%= image_tag("optimized_animated.svg") %>
+    </div>
 </div>
+
 
