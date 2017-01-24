@@ -9,7 +9,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/anatomy' => 'pages#index'
+  get '/' => 'pages#index'
+  get '/anatomy' => 'pages#index_2'
   get '/anatomy/:id' => 'pages#show'
 
   get '/anatomyUsers' => 'anatomy_users#index'
