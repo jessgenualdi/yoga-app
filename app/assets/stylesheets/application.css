@@ -15,7 +15,7 @@
  */
 
  .main {
-  padding: 100px 100px;
+  padding: 100px 150px;
   position: relative;
   width: 100%;
   min-height: auto;
@@ -62,4 +62,8 @@
 
 #page-top {
   padding: 50px 0px 0;
+}
+
+footer {
+  background-color: #590251;
 }
