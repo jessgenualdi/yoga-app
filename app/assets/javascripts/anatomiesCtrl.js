@@ -9,14 +9,22 @@
       });
 
 
-      $scope.class = "red";
-      $scope.changeClass = function() {
-        if ($scope.class === "red") {
-          $scope.class = "blue";
+
+    $scope.select = function($event, name) {
+      console.log(name);
+      var selectedAnatomy = $scope.anatomies.filter(function(anatomy) {
+        return anatomy.anatomy_name === name;
+      })[0];
+      if (selectedAnatomy) {
+        console.log(selectedAnatomy);
+        if (selectedAnatomy.selected) {
+          selectedAnatomy.selected = false;
+          $(event.currentTarget).removeClass('selected');
         } else {
-          $scope.class = "red";
+          selectedAnatomy.selected = true;
+          $(event.currentTarget).addClass('selected');
         }
-      };
+      }
     };
 
     $scope.addAnatomyUsers = function() {
@@ -38,6 +46,13 @@
       }, function(error) {
         $scope.errors = error.data.errors;
       });
+
+
+
+
+
+
+
 
       // for (var i = 0; i < selectedAnatomies.length; i++) {
       //   var params = {

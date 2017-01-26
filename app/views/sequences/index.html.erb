@@ -7,11 +7,25 @@
     <% @anatomy_users.each do |anatomy_user| %>
       <h5> <%= anatomy_user.anatomy.anatomy_name %> </h5>
     <% end %>
+    
+    <%= form_tag "/user", method: :post do %>
+   <div>
+     <%= label_tag :quantity %>
+     <%= text_field_tag :quantity %>
+   </div>
+   <div>
+     <%= hidden_field_tag :jewelry_id, @jewelry.id %>
+   </div>
+   <%= submit_tag "Add to Cart" %>
+ <% end %>
+
 
     <h3>Pose Sequence</h3>
     <% @poses.each do |pose| %>
         <img width="100" src="<%= pose.image %>" />
-      <h5><%= pose.name %></h5><br/>
+      <%= text_field_tag
+        <h5><%= pose.name %></h5><br/>
+      %>
       Anatomies: 
       <% pose.anatomies.each do |anatomy| %>
         <%= anatomy.anatomy_name %>

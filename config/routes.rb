@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   get '/' => 'pages#index'
-  get '/anatomy' => 'pages#index_2'
+  get '/anatomy' => 'pages#index'
   get '/anatomy/:id' => 'pages#show'
 
   get '/anatomyUsers' => 'anatomy_users#index'
@@ -18,7 +18,8 @@ Rails.application.routes.draw do
 
 
   get '/signup' => 'users#new'
-  get 'user' => 'users#index'
+  get '/user' => 'users#index'
+  post '/user' => 'users#create_sequence'
   post '/users' => 'users#create'
 
   
