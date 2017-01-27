@@ -7,7 +7,7 @@
         $scope.anatomies = response.data;
         console.log($scope.anatomies);
       });
-
+    };
 
 
     $scope.select = function($event, name) {
@@ -52,7 +52,7 @@
 
 
 
-
+      
 
       // for (var i = 0; i < selectedAnatomies.length; i++) {
       //   var params = {
