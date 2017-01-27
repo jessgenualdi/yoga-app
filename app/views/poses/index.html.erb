@@ -1,11 +1,11 @@
 <div class="container col-md-12" id="gradient">
     <h1 class="textCenter">Yoga Poses</h1>
     <% @poses.each do |pose| %>
-      <div class="col-md-4">
+      <div class="col-md-4" style="height:450px !important;">
         <a href="/pose/<%= pose.id %>">
           <h4><%= pose.name %></h4>
-          <p><%= pose.sanskrit_name %></p>
-          <img style="padding-bottom:40px;" width="300" src="<%= pose.image %>" />
+          <small>Sanskrit name: <%= pose.sanskrit_name %></small>
+          <img style="padding-bottom:40px;padding-top: 20px;" width="300" src="<%= pose.image %>" />
         </a>
       </div>
     <% end %>

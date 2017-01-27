@@ -1,6 +1,5 @@
-<div class="container main">
-  <div class="col-md-3"></div>
-    <div class="col-md-3" ng-app="app">
+<div class="container main col-md-12" id="gradient">
+    <div class="col-md-12 center" ng-app="app">
       <div ng-controller="anatomiesCtrl" ng-init="setup()">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 303 610.5">
           <style>
@@ -213,11 +212,10 @@
             .pvoJyodD_73{stroke-dasharray:68 70;stroke-dashoffset:69;animation:pvoJyodD_draw 1000ms linear 0ms forwards;}
             .pvoJyodD_74{stroke-dasharray:191 193;stroke-dashoffset:192;animation:pvoJyodD_draw 1000ms linear 0ms forwards;}@keyframes pvoJyodD_draw{100%{stroke-dashoffset:0;}}@keyframes pvoJyodD_fade{0%{stroke-opacity:1;}92.3076923076923%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style>
         </svg>
-       <button ng-click="addAnatomyUsers()">Submit</button>
+      <div  class="col-md-12 textCenter">
+         <button style="margin-left: 20px;" type="button" class="btn btn-warning" ng-click="addAnatomyUsers()">Let's Yoga!</button>
       </div>
-    </div>
-    <div class="col-md-3">
-     <%#= image_tag("optimized_animated.svg") %>
+      </div>
     </div>
     <div class="col-md-12">
         <div style='width: 800px;'>
