@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get '/anatomyUsers' => 'anatomy_users#index'
   get '/sequences' => 'sequences#index'
 
+  get '/poses' => 'poses#index'
+  get '/pose/:id' => 'poses#show'
+
 
   get '/signup' => 'users#new'
   get '/user' => 'users#index'
