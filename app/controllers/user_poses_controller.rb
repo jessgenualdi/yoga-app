@@ -1,11 +1,15 @@
 class UserPosesController < ApplicationController
+  def index 
+    @user_poses = UserPose.all
+    render 'index.html.erb'
+  end
+
   def create
-    userPose.where(user_id: current_user.id).destroy_all
-    params[:pose_ids].each do | pose_id|
-      @userPose = userPose.new(
-        user_id: current_user.id,
-        pose_id: pose_id,
-      )
-      @user_poses.save
-    end
+    @user_poses = UserPose.new(
+      user_id: current_user.id,
+      pose_id: params[:pose_id]
+    )
+    @user_poses.save
+    redirect_to '/user'
+  end
 end

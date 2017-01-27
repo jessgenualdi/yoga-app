@@ -1,5 +1,21 @@
 <div class="container main col-md-12" id="gradient">
-User Dashboard</div>
+
+
+User Dashboard
+<h1 class="textCenter">Your Favorite Poses </h1>
+
+   <% @user_poses.each do |user_pose| %>
+    <div class="col-md-4" style="height:450px !important;">
+        &hearts; <%= user_pose.pose.name %>  </br>
+         <%= user_pose.pose.sanskrit_name %> </br>
+          <img style="padding-bottom:40px;padding-top: 20px;" width="300" src="<%= user_pose.pose.image %>" />
+    </div>
+  <% end %>
+    
+
+
+
+</div>
 
 
 

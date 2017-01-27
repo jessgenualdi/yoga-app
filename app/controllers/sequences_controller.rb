@@ -9,9 +9,7 @@ class SequencesController < ApplicationController
     # end
     @anatomy_users = current_user.anatomy_users
     @poses = []
-    # @anatomy_users.each do |anatomy_user|
-    #   @poses << AnatomyPose.where(anatomy_id: anatomy_user.anatomy_id).sample.pose
-    # end
+    
     rand(5..12).times do
       anatomy_id = @anatomy_users.sample.anatomy_id
       puts "-" * 20 + "#{anatomy_id}"

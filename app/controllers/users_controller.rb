@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   def index
-    render 'index.html.erb'
+    @user_poses = current_user.user_poses
+   
   end
+
   def new
     render 'new.html.erb'
   end

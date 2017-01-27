@@ -1,8 +1,13 @@
 <div class="container col-md-12" id="gradient">
-        <h2><%= @pose.name %></h2>
-        <p><b><%= @pose.sanskrit_name %></b></p>
-        
-        <img style="padding-bottom:40px;" width="300" src="<%= @pose.image %>" />
-        <p><%= @pose.instructions %></p>
-      </div>
+      <h2><%= @pose.name %></h2>
+      <p><b><%= @pose.sanskrit_name %></b></p>
+
+      <img style="padding-bottom:40px;" width="300" src="<%= @pose.image %>" />
+      <p><%= @pose.instructions %></p>
+      <%= form_tag "/user_poses", method: :post do %>
+       <div>
+         <%= hidden_field_tag :pose_id, @pose.id %>
+       </div>
+       <%= submit_tag "Add to Dashboard" %>
+     <% end %>
 </div>
