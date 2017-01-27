@@ -12,4 +12,10 @@ class UserPosesController < ApplicationController
     @user_poses.save
     redirect_to '/user'
   end
+
+  def destroy 
+    user_pose = UserPose.find_by(id: params[:id])
+    user_pose.destroy
+    redirect_to "/user"
+  end
 end

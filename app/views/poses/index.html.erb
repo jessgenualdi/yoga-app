@@ -1,12 +1,18 @@
 <div class="container col-md-12" id="gradient">
     <h1 class="textCenter">Yoga Poses</h1>
     <% @poses.each do |pose| %>
-      <div class="col-md-4" style="height:450px !important;">
+      <div class="col-md-4" style="height:500px !important;">
         <a href="/pose/<%= pose.id %>">
           <h4><%= pose.name %></h4>
           <small>Sanskrit name: <%= pose.sanskrit_name %></small>
           <img style="padding-bottom:40px;padding-top: 20px;" width="300" src="<%= pose.image %>" />
         </a>
+          <%= form_tag "/user_poses", method: :post do %>
+           <div>
+             <%= hidden_field_tag :pose_id, pose.id %>
+           </div>
+           <%= submit_tag "Add to Dashboard", :class => 'btn btn-warning' %>
+          <% end %>
       </div>
     <% end %>
 </div>

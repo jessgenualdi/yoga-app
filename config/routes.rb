@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   get '/user' => 'users#index'
+
   post '/user' => 'users#create_sequence'
   post '/users' => 'users#create'
 
@@ -31,4 +32,5 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   post '/user_poses' => "user_poses#create"
+  delete '/user_poses' => "user_poses#destroy"
 end
