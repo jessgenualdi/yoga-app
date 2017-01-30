@@ -4,6 +4,7 @@
 <h1 class="textCenter">Your Favorite Poses </h1>
    <% @user_poses.each do |user_pose| %>
     <div class="col-md-4" style="height:450px !important;">
+        <a href="/pose/<%= user_pose.pose.id %>">
         &hearts; <%= user_pose.pose.name %>  </br>
          <%= user_pose.pose.sanskrit_name %> </br>
           <img style="padding-bottom:40px;padding-top: 20px;" width="300" src="<%= user_pose.pose.image %>" />
@@ -13,6 +14,7 @@
          </div>
          <%= submit_tag "Remove from dashboard", :class => 'btn btn-warning' %>
          <% end %>
+         </a>
     </div>
   <% end %>
     
